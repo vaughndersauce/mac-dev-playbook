@@ -24,62 +24,67 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/vaughndersauce/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
-  - .gitignore
-  - .inputrc
+  - .gitconfig
   - .osx
-  - .vimrc
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
+  - cask
+  - clamav
+  - python@3.10
+  - eg-examples
+  - gcc
   - git
-  - github/gh/gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
+  - grep
+  - htop
+  - mas
+  - minicom
+  - navi
   - nmap
   - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
+  - pyenv
+  - speedtest-cli
+  - terminal-notifier
+  - thefuck
+  - tldr
+  - tree
   - wget
-  - wrk
-  - zsh-history-substring-search
+  - zsh-completions
+  - trash
+  - svn
+  - git-extras
+  - legit
+  - git-flow
+  - zsh-syntax-highlighting
+  - zsh-autosuggestions
+  - zsh-git-prompt
+  - zsh-fast-syntax-highlighting
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/bundle
+  - homebrew/autoupdate
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  - alfred
+  - discord
   - docker
-  - dropbox
+  - spotify
   - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
+  - visual-studio-code
+  - cleanmymac
+  - steam
+  - iterm2
   - slack
-  - sublime-text
-  - transmit
+  - 1password
+  - tailscale
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -109,22 +114,22 @@ pip_packages: []
 #   version: "0.16.3" # default: N/A
 
 # Set to 'true' to configure Sublime Text.
-configure_sublime: false
-sublime_base_path: '~/Library/Application Support/Sublime Text'
-sublime_config_path: "Packages/User"
-sublime_package_control:
-  - "DocBlockr"
-  - "Dockerfile Syntax Highlighting"
-  - "FileDiffs"
-  - "GitHub Flavored Markdown Preview"
-  - "Jinja2"
-  - "Package Control"
-  - "PHP-Twig"
-  - "Pretty JSON"
-  - "SublimeLinter"
-  - "SublimeLinter-contrib-yamllint"
-  - "TrailingSpaces"
-  - "WordCount"
+# configure_sublime: false
+# sublime_base_path: '~/Library/Application Support/Sublime Text'
+# sublime_config_path: "Packages/User"
+# sublime_package_control:
+#   - "DocBlockr"
+#   - "Dockerfile Syntax Highlighting"
+#   - "FileDiffs"
+#   - "GitHub Flavored Markdown Preview"
+#   - "Jinja2"
+#   - "Package Control"
+#   - "PHP-Twig"
+#   - "Pretty JSON"
+#   - "SublimeLinter"
+#   - "SublimeLinter-contrib-yamllint"
+#   - "TrailingSpaces"
+#   - "WordCount"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
